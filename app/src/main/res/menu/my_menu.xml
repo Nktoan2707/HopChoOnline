@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeItemMenu"
+        android:icon="@drawable/home_32"
+        android:title="" />
+<!--    <item-->
+<!--        android:id="@+id/shoppingItemMenu"-->
+<!--        android:icon="@drawable/shopping_cart_32"-->
+<!--        android:title="" />-->
+
+    <item
+        android:id="@+id/addPostItemMenu"
+        android:icon="@drawable/add_post"
+        android:title="" />
+
+    <item
+        android:id="@+id/mapItemMenu"
+        android:icon="@drawable/map_32"
+        android:title="" />
+    <item
+        android:id="@+id/profileItemMenu"
+        android:icon="@drawable/user_32"
+        android:title="" />
+</menu>

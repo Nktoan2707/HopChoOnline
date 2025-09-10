@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    Header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/light_yellow"
+        android:layout_alignParentTop="true"
+        android:id="@+id/profileHeader"
+        >
+
+        <TextView
+            android:id="@+id/titleProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="TRANG CÁ NHÂN"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@null"
+            android:id="@+id/imgBtnBackOtherProfile"
+            />
+    </LinearLayout>
+
+    <!--    Main-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/profileHeader"
+        android:layout_above="@+id/profileFooter"
+        android:orientation="vertical"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+
+            android:scrollbars = "vertical"
+            android:scrollbarStyle="insideInset"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/avatarImg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/avatar_default"
+                    app:civ_border_color="#3f51b5"
+                    app:civ_border_width="1dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="10dp"
+                    app:civ_shadow_color="#3f51b5"/>
+
+                <TextView
+                    android:id="@+id/usernameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="nguyentoan"
+                    android:textColor="@color/black"
+
+                    android:textSize="17dp"
+                    android:textStyle="normal" />
+                <TextView
+                    android:id="@+id/fullNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Nguyễn Khánh Toàn"
+                    android:textColor="@color/black"
+
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Uy tín: "
+                        android:textSize="15dp"
+                        />
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/star"-->
+<!--                        />-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/star"-->
+<!--                        />-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/star"-->
+<!--                        />-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/star"-->
+<!--                        />-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/star"-->
+<!--                        />-->
+                    <RatingBar
+                        android:id="@+id/ratingBarProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:progressDrawable="@drawable/ratingbar_small_stars"
+                        android:rating="4.7"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:stepSize="0.5"></RatingBar>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="135 Trần Hưng Đạo, phường Cầu Ông Lãnh, Quận 1, TPHCM"
+                    android:textSize="15dp"
+                    android:id="@+id/addressTextView"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center"
+                    />
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    >-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="10"-->
+<!--                        android:id="@+id/numFollowerTextView"-->
+<!--                        android:textSize="15dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text=" người theo dõi"-->
+<!--                        android:textSize="15dp"-->
+<!--                        />-->
+
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    >-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="10"-->
+<!--                        android:id="@+id/numFollowingTextView"-->
+<!--                        android:textSize="15dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text=" người đang theo dõi"-->
+<!--                        android:textSize="15dp"-->
+<!--                        />-->
+<!--                </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/followBtn"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@color/light_yellow"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/follow_user"
+                    android:text="Theo dõi" />
+                <Button
+                    android:id="@+id/ratingBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="@color/light_yellow"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/rating_btn"
+                    android:text="Đánh giá" /></LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtViewBuyOrSell"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Đang bán/Cần mua"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+
+                        />
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!--    Footer-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/light_yellow"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/profileFooter"
+
+        >
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigateView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/light_yellow"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/my_menu" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

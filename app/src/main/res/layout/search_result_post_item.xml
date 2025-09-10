@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:id="@+id/parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        >
+<!--        <RelativeLayout-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/image_border_shadow"-->
+<!--            android:padding="10dp"-->
+<!--            android:layout_centerVertical="true">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/savedPostImage"-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:src="@drawable/honda"-->
+<!--                android:adjustViewBounds="true" />-->
+<!--        </RelativeLayout>-->
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/image_border_shadow"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/resultSearchPostImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/honda" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Title Test"
+                />
+
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="2.000.000đ"
+                android:textColor="@color/red"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:orientation="horizontal"
+                android:layout_weight="3">
+                <ImageView
+                    android:id="@+id/icon_is_priority"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/priority_icon_30"
+                    app:tint="@color/grey"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/text_is_priority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/text_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - Tp.Hồ Chí Minh"
+                    android:textSize="10sp"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/text_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - 3km"
+                    android:textSize="10sp"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginTop="-10dp"
+                >
+                <TextView
+                    android:id="@+id/item_reliable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Uy tín"
+                    />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rating="3.5"
+                    android:scaleY="0.5"
+                    android:scaleX="0.5"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:progressTint="#FFCC01"
+                    android:id="@+id/ratingbar"
+                    android:layout_marginLeft="-40dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                />
+
+
+                <ImageView
+                    android:id="@+id/iconSavePost"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|end|center"
+                    android:src="@drawable/ic_not_favorite"
+                    app:tint="@color/red_light"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/recycler_view_divider" />
+</LinearLayout>

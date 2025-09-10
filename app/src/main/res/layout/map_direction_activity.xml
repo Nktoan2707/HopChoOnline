@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<!--    <include-->
+<!--        layout="@layout/toolbar_map_direction"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/btn_back"-->
+<!--        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/text_back"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="14sp"-->
+<!--        app:icon="@drawable/ic_arrow_back_30"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:background="@drawable/button_background"/>-->
+<!--    -->
+<!--    <fragment-->
+<!--        android:id="@+id/map"-->
+<!--        android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--    </fragment>-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_open_gg_maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_btn_open_maps"
+        app:icon="@drawable/ic_global_30"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green_light"
+        android:padding="8dp"
+        android:elevation="4dp"/>
+</LinearLayout>

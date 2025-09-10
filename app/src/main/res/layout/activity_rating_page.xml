@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/light_yellow"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_marginBottom="10dp"
+        app:homeAsUpIndicator="@drawable/ic_arrow_back_30"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar">
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chọn số sao:"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+<!--        <EditText-->
+<!--            android:id="@+id/edtStar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/edittext_border"-->
+<!--            android:padding="8dp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="14sp"-->
+<!--            android:inputType="number"-->
+<!--            android:hint="Nhập số sao/5"-->
+<!--            android:layout_marginBottom="10dp"/>-->
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="0"
+                android:progressTint="#FFCC01"
+                android:id="@+id/edtStar"
+                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Viết đánh giá:"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/edtRating"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:gravity="top"
+                android:background="@drawable/edittext_border"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:hint="Nhập đánh giá..."
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/green_light"
+                android:padding="8dp"
+                android:elevation="4dp"/>
+
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Người khác đã đánh giá người dùng này"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ratingRecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/holderFooter"
+            android:layout_below="@id/holderHeader"/>
+    </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

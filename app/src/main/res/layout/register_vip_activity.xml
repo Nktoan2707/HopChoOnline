@@ -1,0 +1,215 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/light_yellow"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_marginBottom="10dp"
+            app:homeAsUpIndicator="@drawable/ic_arrow_back_30"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/titleRegisterVip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ĐĂNG KÍ VIP"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số tài khoản ngân hàng"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/edtBankNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_border"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:hint="Nhập số tài khoản"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/txtViewErrorBankNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(*) Số tài khoản ngân hàng không hợp lệ"
+                android:textColor="@color/red_light"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Họ và tên chủ tài khoản"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/edtNameOfBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:background="@drawable/edittext_border"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:hint="Nhập họ và tên"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="5dp"
+                />
+            <TextView
+                android:id="@+id/txtViewErrorNameOfBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(*) Tên chủ tài khoản không hợp lệ"
+                android:textColor="@color/red_light"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số CCCD"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/edtIdCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:background="@drawable/edittext_border"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:hint="Nhập CCCD"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/txtViewErrorIdCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(*) CCCD không hợp lệ"
+                android:textColor="@color/red_light"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/label_expiredDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ngày gia hạn"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/edtExpiredDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:background="@drawable/edittext_border"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:hint=""
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="5dp"
+                />
+            <TextView
+                android:id="@+id/txtViewAnnouncementExpiredDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(*) Tài khoản VIP của bạn sắp hết hạn. Vui lòng gia hạn thêm.
+                                   Nếu không hệ thống sẽ tự động hủy sau 3 ngày nữa"
+                android:textColor="@color/red_light"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"/>
+
+            <CheckBox
+                android:id="@+id/checkboxPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tôi đồng với điều khoản và chính sách hàng tháng sẽ gia hạn hợp đồng 100.000 VND." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng kí"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/green_light"
+                    android:padding="8dp"
+                    android:elevation="4dp"
+                    android:layout_marginRight="5dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_expired_date_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gia hạn"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/green_light"
+                    android:padding="8dp"
+                    android:elevation="4dp"
+                    android:layout_marginRight="5dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_update_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cập nhật"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/yellow"
+                    android:padding="8dp"
+                    android:elevation="4dp"
+                    android:layout_marginRight="5dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_cancel_register_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hủy đăng kí"
+                    android:textSize="12sp"
+                    android:backgroundTint="@color/red_light"
+                    android:layout_marginEnd="8dp"
+                    android:padding="8dp"
+                    android:layout_marginRight="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+

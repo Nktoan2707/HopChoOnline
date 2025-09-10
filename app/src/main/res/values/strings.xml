@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Họp Chợ Online</string>
+    <string name="choose_image">Thay đổi ảnh</string>
+    <string name="username">Username</string>
+    <string name="fullname">Fullname</string>
+    <string name="phone">Number phone</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="cancel">Hủy</string>
+    <string name="save">Lưu</string>
+    <string name="label_saved_posts">Tin đăng đã lưu</string>
+    <string name="search_hint">Tìm kiếm sản phẩm</string>
+    <string name="text_back">Trở về trang trước</string>
+    <string name="label_name_product">Tên sản phẩm</string>
+    <string name="label_title">Tiêu đề</string>
+    <string name="label_description">Mô tả</string>
+    <string name="label_price">Giá</string>
+    <string name="label_images">Ảnh</string>
+    <string name="placeholder_my_location">Vị trí của bạn</string>
+    <string name="placeholder_destination_location">Vị trí bạn muốn đến</string>
+    <string name="text_btn_open_maps">Open Your Maps</string>
+</resources>

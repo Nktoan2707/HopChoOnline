@@ -1,0 +1,27 @@
+package com.example.hopchoonline;
+
+public class Option {
+    private String name;
+    private Integer icon;
+
+    public Option(String name, Integer icon){
+        this.name = name;
+        this.icon = icon;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getIcon() {
+        return icon;
+    }
+
+    public void setIcon(Integer icon) {
+        this.icon = icon;
+    }
+}

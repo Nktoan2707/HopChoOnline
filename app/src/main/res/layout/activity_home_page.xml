@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePageActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_input_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp" />
+
+    <ImageView
+        android:id="@+id/imgBanner"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="3dp"
+        android:scaleType="centerCrop"
+        android:background="@color/design_default_color_primary"
+        android:src="@drawable/banner_new" />
+
+    <TextView
+        android:id="@+id/title_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imgBanner"
+        android:layout_alignBottom="@+id/imgBanner"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="-522dp"
+        android:text="Tin đăng dành cho bạn">
+
+    </TextView>
+
+    <ScrollView
+        android:id="@+id/contentScroll"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigateView"
+        android:layout_below="@id/title_home">
+        <RelativeLayout
+            android:id="@+id/holderContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/postRecView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey"
+                android:padding="1dp" />
+            <Button
+                android:id="@+id/btnLoadMorePost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postRecView"
+                android:backgroundTint="@color/light_yellow"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:text="Xem thêm" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigateView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_yellow"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/my_menu" />
+</RelativeLayout>

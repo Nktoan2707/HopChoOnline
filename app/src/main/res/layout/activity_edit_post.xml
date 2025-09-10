@@ -1,0 +1,237 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include
+            layout="@layout/toolbar_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_title"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/edtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_border"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:hint="Nhập tiêu đề..."
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/txtViewErrorTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(*) Vui lòng không để trống tiêu đề"
+                android:textColor="@color/red_light"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ giao dịch"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/edtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:background="@drawable/edittext_border"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:hint="Nhập địa chỉ giao dịch"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="5dp"
+                />
+            <TextView
+                android:id="@+id/txtViewErrorAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(*) Địa chỉ không hợp lệ"
+                android:textColor="@color/red_light"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_description"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/edtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="top"
+                android:background="@drawable/edittext_border"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:hint="Nhập mô tả..."
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/txtViewErrorDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(*) Vui lòng không để trống mô tả"
+                android:textColor="@color/red_light"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_price"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/edtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_border"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:hint="Nhập giá..."
+                android:layout_marginBottom="10dp"
+                android:inputType="number|numberSigned"/>
+            <TextView
+                android:id="@+id/txtViewErrorPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(*) Giá không hợp lệ"
+                android:textColor="@color/red_light"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_images"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/image_border_shadow"
+                android:padding="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/my_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/honda"
+                    android:scaleType="centerCrop"
+                    android:padding="15dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iconUpdateImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit_30"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    />
+
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/iconDeleteImage"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:src="@drawable/ic_delete_30"-->
+                <!--                    android:layout_alignParentTop="true"-->
+                <!--                    android:layout_alignParentEnd="true"-->
+                <!--                    android:layout_margin="8dp" />-->
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup"
+
+                android:layout_marginTop="15dp"
+
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cần bán"
+                    android:id="@+id/radioBtnSell"
+                    >
+                </RadioButton>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cần mua"
+                    android:layout_marginLeft="35dp"
+                    android:id="@+id/radioBtnBuy"
+                    >
+                </RadioButton>
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/red_light"
+                    android:layout_marginEnd="8dp"
+                    android:padding="8dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/green_light"
+                    android:padding="8dp"
+                    android:elevation="4dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
